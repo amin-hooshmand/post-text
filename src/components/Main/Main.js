@@ -15,11 +15,10 @@ const Main = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (!name || !email) {
-      return <p>Name or Email in Empty</p>;
+      return;
     }
+    props.onAddText(name, email);
   };
-
-  props.onAddText();
 
   return (
     <form onClick={submitHandler} dir="rtl" className={classes.main}>
