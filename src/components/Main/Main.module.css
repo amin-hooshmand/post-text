@@ -19,3 +19,15 @@ input:focus {
   border-bottom-width: 3px;
   border-bottom-color: palevioletred;
 }
+
+.button {
+  padding: 4px 8px;
+  width: 30%;
+  background-color: brown;
+  color: wheat;
+}
+
+.error {
+  font-weight: 700;
+  color: rgb(228, 47, 47);
+}

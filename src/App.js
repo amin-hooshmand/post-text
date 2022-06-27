@@ -9,7 +9,7 @@ function App() {
 
   const addUserHandler = (sName, sEmail) => {
     setText((prevTexts) => {
-      return [...prevTexts, { name: sName, email: sEmail }];
+      return [...prevTexts, { name: sName, email: sEmail, id: Math.random() }];
     });
   };
 
