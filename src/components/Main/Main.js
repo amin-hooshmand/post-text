@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import Error from "../UI/Error";
 import classes from "./Main.module.css";
 
 const Main = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState();
-  const [visivble, setVisivble] = useState(false);
 
   const handlerName = (event) => {
     setName(event.target.value);
@@ -19,19 +16,10 @@ const Main = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (name.trim().length === 0 || email.trim().length === 0) {
-      setError({ title: "Error", message: "Name or Email is Empty" });
-      setVisivble(true);
-      return;
-    }
 
     props.onAddText(name, email);
     setName("");
     setEmail("");
-  };
-
-  const Empty = () => {
-    setVisivble(false);
   };
 
   return (
